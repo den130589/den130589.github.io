@@ -1,0 +1,182 @@
+footer {
+    
+    background-color: #141414;
+    color: white;
+
+    a {
+        color: white;
+    }
+
+    .footer-content {
+        width: auto;
+        max-width: 1292px;
+        padding-top: 70px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        text-transform: capitalize;
+        
+        li {
+            a {
+                color: #737373;
+                line-height: 25px;
+            }
+        }
+
+        li:first-child {
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        
+        }
+
+        
+    }
+
+    .icon-footer-fb {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 42px;
+        background-image: url(../img/icon-fb-footer.png);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .icon-footer-tw {
+        @extend .icon-footer-fb;
+        background-image: url(../img/icon-tw-footer.png);
+    }
+
+    .icon-footer-ins {
+        @extend .icon-footer-fb;
+        background-image: url(../img/icon-3-footer.png);
+    }
+
+    .icon-footer-4 {
+        @extend .icon-footer-fb;
+        background-image: url(../img/icon-4-footer.png);
+    }
+
+    .icon-footer-5 {
+        @extend .icon-footer-fb;
+        background-image: url(../img/icon-5-footer.png);
+    }
+
+    .footer-social {
+
+            li {
+                display: inline-block;
+                margin-right: 17px;
+        }
+    }
+    
+    form {
+        border: 1px solid #484848;
+        width: 365px;
+        height: 41px;
+        line-height: 41px;
+        vertical-align: middle;
+        margin-top: 55px;
+        input {
+            width: 255px;
+            height: 33px;
+            padding: 0;
+            background-color: #141414;
+            border: none;
+            color: white;
+        }
+
+        button {
+            width: 103px;
+            height: 33px;
+            background-color: #323030;
+            border: none;
+            color: white;
+        }
+    }
+
+    .footer-bottom {
+        @include flexbox;
+        @include justify-content(space-between);
+        width: auto;
+        max-width: 1292px;
+        margin: 0 auto;
+        color: #363636;
+        font-size: 11px;
+        
+        margin-top: 120px;
+        padding-bottom: 120px;
+
+        li {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .pay-1 {
+            width: 20px;
+            height: 10px;
+            background-image: url(../img/icon-footer-bottom-1.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+            display: inline-block;
+        }
+
+        .pay-2 {
+            @extend .pay-1;
+            background-image: url(../img/icon-footer-bottom-2.png);
+        }
+
+        .pay-3 {
+            @extend .pay-1;
+            background-image: url(../img/icon-footer-bottom-3.png);
+        }
+
+        .pay-4 {
+            @extend .pay-1;
+            background-image: url(../img/icon-footer-bottom-1.png);
+        }
+
+        .top {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            background-image: url(../img/arrow-top.png);
+            display: inline-block;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 5%;
+        }
+    }
+}
+
+.line {
+    display: inline-block;
+    width: 20px;
+    color: white;
+    
+}
+
+.border-line {
+    position: relative;
+    &:before {
+        content: '';
+        border-bottom: 2px solid  white;
+        width: 45px;
+        position: absolute;
+        left: 56px;
+        top: 22px;
+    }
+
+    &:after {
+        content: '';
+        border-bottom: 2px solid white;
+        width: 45px;
+        display: inline-block;
+        position: absolute;
+        left: -46px;
+        top: 22px;
+    }
+}

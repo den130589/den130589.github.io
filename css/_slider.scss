@@ -1,0 +1,104 @@
+
+
+.slider {
+
+    .wrapper {
+        background-image: url(../img/slider.jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        padding-bottom: 33px;
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        padding-top: 138px;
+        padding-left: 45px;
+        padding-right: 45px;
+        box-sizing: border-box;
+    }
+
+    .sale {
+        width: 277px;
+        height: 277px;
+        border: 2px solid white;
+        border-radius: 1%;
+        box-sizing: border-box;
+
+        .sale-in {
+            width: 259px;
+            height: 259px;
+            border: 1px solid white;
+            border-radius: 1%;
+            box-sizing: border-box;
+            margin: 6px;
+            text-align: center;
+            padding-top: 27px;
+            line-height: 60px;
+            
+        }
+    }
+}
+
+.button-shop-now {
+    width: 190px;
+    height: 53px;
+    background-color: #f09d66;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 55px auto;
+    font-size: 24px;
+    
+    text-transform: uppercase;
+
+    a {
+        display: block;
+        line-height: 53px;
+        vertical-align: middle;
+        color: white;
+        
+    }
+}
+.scroll {
+    @include flexbox;
+    @include justify-content(space-between);
+    width: 72px;
+    margin: 113px auto 0px;
+}
+
+.scroll-icon {
+    width: 15px;
+    height: 15px;
+    background-color: #b2b2b2;
+    transform: rotate(45deg);
+}
+
+.button-left {
+    width: 19px;
+    height: 50px;
+    overflow: hidden;
+    padding-top: 7px;
+    padding-left: 7px;
+    position: relative;
+    top: -90px;
+    span {
+        width: 35px;
+        height: 35px;
+        border: 1px solid white;
+        display: block;
+        transform: rotate(45deg);
+
+    }
+}
+
+.button-right {
+    @extend .button-left;
+    transform: rotate(180deg);
+    span {
+        width: 35px;
+        height: 35px;
+        border: 1px solid white;
+        display: block;
+        transform: rotate(45deg);
+
+    }
+}

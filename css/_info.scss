@@ -1,0 +1,126 @@
+.info {
+
+    .wrapper {
+        @include flexbox;
+        @include justify-content(space-between);
+        padding: 68px 75px 68px 75px;
+        box-sizing: border-box;
+    }
+
+    .shipping {
+        width: 390px;
+        height: 100px;
+        background-color: #d9bf8f;
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            overflow: visible;
+            z-index: 10;
+            left: 100%;
+            top: 0;
+            width: 0;
+	        height: 0;
+	        border-top: 50px solid transparent;
+	        border-left: 40px solid #d9bf8f;
+	        border-bottom: 50px solid transparent;
+        }
+    }
+
+    .returns {
+        color: white;
+        width: 440px;
+        height: 100px;
+        background-color: black;
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            overflow: visible;
+            z-index: 9;
+            left: 0;
+            top: 0;
+            width: 0;
+	        height: 0;
+	        border-top: 50px solid transparent;
+	        border-left: 40px solid white;
+	        border-bottom: 50px solid transparent;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            overflow: visible;
+            transform: rotate(180deg);
+            left: 400px;
+            top: 0px;
+            width: 0;
+            top: 0;
+	        height: 0;
+	        border-top: 50px solid transparent;
+	        border-left: 40px solid white;
+	        border-bottom: 50px solid transparent;
+        }
+
+        
+    }
+
+    .support {
+        width: 390px;
+        height: 100px;
+        background-color: #d9bf8f;
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            overflow: visible;
+            transform: rotate(180deg);
+            left: -40px;
+            width: 0;
+            top: 0;
+	        height: 0;
+	        border-top: 50px solid transparent;
+	        border-left: 40px solid #d9bf8f;
+	        border-bottom: 50px solid transparent;
+        }
+    }
+
+    .icon-shipping {
+        background-image: url(../img/plane-icon.png);
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 30px;
+    }
+
+    .icon-returns {
+        @extend .icon-shipping;
+        background-image: url(../img/clock-icon.png);
+    }
+
+    .icon-support {
+        @extend.icon-shipping;
+        background-image: url(../img/sup-icon.png);
+    }
+
+    .shipping, .returns, .support {
+        text-align: center;
+        padding-top: 14px;
+        box-sizing: border-box;
+        div {
+            display: inline-block;
+
+            p {
+                text-align: left;
+            }
+        }
+        
+        
+    }
+}

@@ -1,0 +1,100 @@
+.catalog {
+    margin-bottom: 96px;
+    
+    h1:after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: #d9bf8f;
+        display: inline-block;
+        transform: rotate(45deg);
+        margin-left: 40px;
+    }
+
+    .catalog-content {
+        width: auto;
+        max-width: 1292px;
+        border: 2px solid #eaeaea;
+        margin: 0 auto;
+        padding: 17px 0px 0px 15px ;
+        box-sizing: border-box;
+    }
+
+    .catalog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-rows: 1fr 1fr;
+
+        li {
+            position: relative;
+            margin-bottom: 10px;
+
+            &:hover .focus{
+              visibility: visible;  
+            }
+        }
+
+        .focus {
+            width: 300px;
+            height: 350px;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 11;
+            opacity: 0.5;
+            visibility: hidden;
+            &:before {
+                content: '';
+                width: 70px;
+                height: 60px;
+                background-image: url(../img/icon-catalog.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: (300px/2) - 35px;
+                top: (350px/2) - 30px;
+                position: absolute;
+                z-index: 12;
+            }
+        }    
+
+        .discount {
+            width: 60px;
+            height: 60px;
+            background-color: #feab12;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            vertical-align: middle;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+
+        .add-cart {
+            border-bottom: 42px solid #f0975c;
+	        border-left: 50px solid transparent;
+	        border-right: 50px solid transparent;
+	        height: 0;
+            width: 100px;
+            text-align: center;
+            line-height: 42px;
+            vertical-align: middle;
+            position: absolute;
+            z-index: 10;
+            top: 308px;
+            left: 17%;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        img {
+            width: auto;
+            height: 350px;
+        }
+
+    }
+}

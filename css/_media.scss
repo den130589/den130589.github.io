@@ -1,0 +1,182 @@
+
+
+@media (max-width: 1200px) {
+    .bottom-header {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        i {
+            margin-right: 5px!important;
+        }
+
+    }
+
+    .info {
+        .wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        i {
+            width: 30px!important;
+            height: 30px!important;
+            margin-right: 5px!important;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    
+    .top-header {
+
+        li {
+            width: 90px!important;
+        }
+    }
+    
+    .bottom-header {
+        
+        .logo {
+            width: 100%;
+            @include order(-1);
+            text-align: center;
+
+        }
+    
+
+    }
+
+    .info {
+        .wrapper {
+           @include flex-direction(column);
+           .shipping, .returns, .support {
+               width: 100%;
+
+               &:before {
+                   display: none;
+               }
+
+               &:after {
+                display: none;
+            }
+           }
+
+
+        }
+        
+        
+    }
+
+    footer {
+
+        .footer-content {
+            margin-left: 30px;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+            
+
+        }
+    }
+
+    
+}
+
+@media (max-width: 698px) {
+
+    .catalog-content {
+        width: 350px!important;
+        
+    }
+}
+
+
+
+@media (max-width: 762px) {
+    
+    .top-header {
+        padding-left: 5px;
+        padding-right: 5px;
+
+        .phone {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    
+    .bottom-header {
+
+        .nav-menu {
+            width: 100%;
+            text-align: center;
+            @include order(1);
+            ul {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                @include justify-content(center);
+            }
+
+
+        }
+
+        .social-header {
+            margin: 40px auto;
+        }
+    
+
+    }
+
+    footer {
+
+        .footer-content {
+       
+            grid-template-columns: 1fr 1fr;
+            
+            
+
+        }
+    }
+       
+}
+
+@media (max-width: 480px) {
+    
+    .nav-menu {
+        display: none!important;
+    }
+
+    .mobile-menu {
+        display: block!important;
+        margin: 0 auto;
+        width: 100%;
+        @include order(3);
+
+        &:hover .mobile-menu-list {
+            display: block;
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            line-height: 40px;
+            
+
+            a {
+                color: lightblue;
+            }
+           
+        }
+        
+    }
+
+    footer {
+
+        .footer-content {
+            
+            grid-template-columns: 1fr;
+            
+        }
+    }
+}

@@ -1,0 +1,159 @@
+.top-header {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    padding: 15px 75px 15px 80px;
+    background-color: #f2f2f2;
+
+    a {
+        color: #393939;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+    
+    i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-image: url(../img/icon-phone.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    ul {
+        @include flexbox;
+
+        li {
+            width: 143px;
+            border-right: 1px solid #5c5c5c;
+            text-align: center;
+            box-sizing: border-box;
+
+            &:last-child {
+                border: none;
+            }
+        }
+        
+    }
+}
+
+.bottom-header {
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include flex-wrap(wrap);
+    padding: 30px 75px 30px 80px;
+    
+    .mobile-menu {
+        display: none;
+        width: 150px;
+        height: 60px;
+        background-image: url(../img/mobile-menu-icon.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+
+        .mobile-menu-list {
+            display: none;
+        }
+
+    }
+    
+    .nav-menu {
+
+        a {
+            color: #000000;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        ul {
+            @include flexbox;
+
+            li {
+                margin-right: 27px;
+                font-style: italic;
+                text-transform: capitalize;
+                position: relative;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        .sub-menu {
+            @include flex-direction(column);
+            position: absolute;
+            overflow: hidden;
+            height: 0px;
+            transition: ease-in-out 1s;
+        }
+
+        .open-sub-menu:hover ul.sub-menu{     
+            height: 200px;           
+        }
+
+    }
+
+    
+    .social-header {  
+
+        i  {
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            border: 1px solid #d9bf8f;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .social-icon-top-fb {
+            background-image: url(../img/f.png);
+            background-position: center;
+            background-size: 40%;
+            background-repeat: no-repeat;
+        }
+        .social-icon-top-twitter {
+            background-image: url(../img/twitter-icon.png);
+            background-size: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .social-icon-top-twitter2 {
+            background-image: url(../img/twitter-icon2.png);
+            background-size: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .social-icon-top-instagram {
+            background-image: url(../img/insta-icon.png);
+            background-size: 40%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .language {
+
+            display: inline-block;
+
+            select {
+                width: 115px;
+                height: 35px;
+                background-color: black;
+                color: white;
+                position: relative;
+                top: -15px;
+                text-transform: uppercase;
+
+                option {
+                    background-color: #242424;
+                    height: 35px;
+                }
+            }
+            
+        }
+
+    }
+}
+
+
