@@ -2,7 +2,7 @@
     @include flexbox;
     @include justify-content(space-between);
     @include flex-wrap(wrap);
-    padding: 15px 75px 15px 80px;
+    padding: 15px 0px 15px 80px;
     background-color: #f2f2f2;
 
     a {
@@ -22,6 +22,7 @@
 
     ul {
         @include flexbox;
+        
 
         li {
             width: 143px;

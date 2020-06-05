@@ -115,7 +115,7 @@ h1 {
   -ms-flex-pack: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 15px 75px 15px 80px;
+  padding: 15px 0px 15px 80px;
   background-color: #f2f2f2;
 }
 
@@ -370,6 +370,10 @@ h1 {
           transform: rotate(45deg);
 }
 
+.scroll-icon:active {
+  background-color: black;
+}
+
 .button-left, .button-right {
   width: 19px;
   height: 50px;
@@ -418,7 +422,7 @@ h1 {
 }
 
 .info .shipping {
-  width: 390px;
+  width: 30%;
   height: 100px;
   background-color: #d9bf8f;
   position: relative;
@@ -441,7 +445,7 @@ h1 {
 
 .info .returns {
   color: white;
-  width: 440px;
+  width: 32%;
   height: 100px;
   background-color: black;
   position: relative;
@@ -469,7 +473,7 @@ h1 {
   overflow: visible;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  left: 400px;
+  right: 0;
   top: 0px;
   width: 0;
   top: 0;
@@ -480,7 +484,7 @@ h1 {
 }
 
 .info .support {
-  width: 390px;
+  width: 30%;
   height: 100px;
   background-color: #d9bf8f;
   position: relative;
@@ -551,12 +555,23 @@ h1 {
   margin-left: 40px;
 }
 
+.catalog h1:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #d9bf8f;
+  display: inline-block;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-right: 40px;
+}
+
 .catalog .catalog-content {
   width: auto;
   max-width: 1292px;
   border: 2px solid #eaeaea;
   margin: 0 auto;
-  padding: 17px 0px 0px 15px;
+  padding: 17px 15px 0px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -568,11 +583,14 @@ h1 {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
 }
 
 .catalog .catalog-grid li {
   position: relative;
   margin-bottom: 10px;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .catalog .catalog-grid li:hover .focus {
@@ -635,6 +653,7 @@ h1 {
   color: white;
   text-transform: uppercase;
   font-size: 14px;
+  z-index: 12;
 }
 
 .catalog .catalog-grid img {
@@ -938,6 +957,15 @@ footer .footer-bottom .top {
   footer .footer-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  footer .footer-content form {
+    width: 300px;
+  }
+  footer .footer-content form input {
+    width: 200px;
+  }
+  footer .footer-content form button {
+    width: 92px;
   }
 }
 /*# sourceMappingURL=style.css.map */

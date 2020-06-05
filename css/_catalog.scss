@@ -11,12 +11,22 @@
         margin-left: 40px;
     }
 
+    h1:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: #d9bf8f;
+        display: inline-block;
+        transform: rotate(45deg);
+        margin-right: 40px;
+    }
+
     .catalog-content {
         width: auto;
         max-width: 1292px;
         border: 2px solid #eaeaea;
         margin: 0 auto;
-        padding: 17px 0px 0px 15px ;
+        padding: 17px 15px 0px 15px ;
         box-sizing: border-box;
     }
 
@@ -24,14 +34,18 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
 
         li {
             position: relative;
             margin-bottom: 10px;
-
+            width: 300px;
+            margin: 0 auto;
             &:hover .focus{
               visibility: visible;  
             }
+
+           
         }
 
         .focus {
@@ -89,6 +103,7 @@
             color: white;
             text-transform: uppercase;
             font-size: 14px;
+            z-index: 12;
         }
 
         img {

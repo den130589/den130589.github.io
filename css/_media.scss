@@ -176,6 +176,21 @@
         .footer-content {
             
             grid-template-columns: 1fr;
+
+            form {
+                
+                width: 300px;
+
+                input {
+                    width: 200px;
+                    
+                }
+        
+                button {
+                    width: 92px;
+                   
+                }
+            }
             
         }
     }

@@ -70,6 +70,10 @@
     height: 15px;
     background-color: #b2b2b2;
     transform: rotate(45deg);
+
+    &:active {
+        background-color: black;
+    }
 }
 
 .button-left {
