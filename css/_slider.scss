@@ -1,16 +1,18 @@
 
 
 .slider {
-
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     .wrapper {
         background-image: url(../img/slider.jpg);
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
         padding-bottom: 33px;
-        @include flexbox;
-        @include justify-content(space-between);
-        @include align-items(center);
+        // @include flexbox;
+        // @include justify-content(space-between);
+        // @include align-items(center);
         padding-top: 138px;
         padding-left: 45px;
         padding-right: 45px;
@@ -18,11 +20,16 @@
     }
 
     .sale {
+        display: flex;
+        justify-content: center;
         width: 277px;
         height: 277px;
         border: 2px solid white;
         border-radius: 1%;
         box-sizing: border-box;
+        position: relative;
+        left: 50%;
+         margin-left: -140px;
 
         .sale-in {
             width: 259px;

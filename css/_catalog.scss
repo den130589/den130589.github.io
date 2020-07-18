@@ -44,6 +44,10 @@
             &:hover .focus{
               visibility: visible;  
             }
+            &:hover .add-cart {
+                border-bottom: 42px solid orange;
+                
+            }
 
            
         }
@@ -88,7 +92,7 @@
         }
 
         .add-cart {
-            border-bottom: 42px solid #f0975c;
+            border-bottom: 42px solid black;
 	        border-left: 50px solid transparent;
 	        border-right: 50px solid transparent;
 	        height: 0;

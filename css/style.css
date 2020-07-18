@@ -54,6 +54,17 @@ table {
 
 body {
   font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+body #cover {
+  position: absolute;
+  background-color: gray;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  z-index: 30;
 }
 
 a {
@@ -150,6 +161,83 @@ h1 {
 
 .top-header ul li:last-child {
   border: none;
+}
+
+.top-header ul li span {
+  color: #393939;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+#modal {
+  position: absolute;
+  width: 350px;
+  height: auto;
+  background-color: white;
+  border: 2px solid lightgrey;
+  z-index: 31;
+  left: 50%;
+  top: 300px;
+  margin-left: -175px;
+  padding: 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 20px;
+  display: none;
+}
+
+#modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#modal p {
+  color: orange;
+}
+
+#modal input {
+  border-left: 4px solid orange;
+  margin-top: 15px;
+}
+
+#modal button {
+  background-color: orange;
+  border: none;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#modal .modal-sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+}
+
+#modal .modal-sign span {
+  margin-top: 12px;
+}
+
+#modal .modal-sign button {
+  margin-top: 5px;
+}
+
+#modal #btnClose {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 20px;
 }
 
 .bottom-header {
@@ -282,25 +370,18 @@ h1 {
   height: 35px;
 }
 
+.slider {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .slider .wrapper {
   background-image: url(../img/slider.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   padding-bottom: 33px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
-  -ms-flex-pack: space-between;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-align: center;
-          align-items: center;
   padding-top: 138px;
   padding-left: 45px;
   padding-right: 45px;
@@ -309,12 +390,21 @@ h1 {
 }
 
 .slider .sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 277px;
   height: 277px;
   border: 2px solid white;
   border-radius: 1%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  margin-left: -140px;
 }
 
 .slider .sale .sale-in {
@@ -597,6 +687,10 @@ h1 {
   visibility: visible;
 }
 
+.catalog .catalog-grid li:hover .add-cart {
+  border-bottom: 42px solid orange;
+}
+
 .catalog .catalog-grid .focus {
   width: 300px;
   height: 350px;
@@ -638,7 +732,7 @@ h1 {
 }
 
 .catalog .catalog-grid .add-cart {
-  border-bottom: 42px solid #f0975c;
+  border-bottom: 42px solid black;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   height: 0;
@@ -797,6 +891,9 @@ footer .footer-bottom .pay-4 {
 }
 
 footer .footer-bottom .top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
   width: 40px;
   height: 40px;
   background-color: black;
@@ -805,6 +902,7 @@ footer .footer-bottom .top {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5%;
+  cursor: pointer;
 }
 
 .line {

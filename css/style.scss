@@ -5,6 +5,19 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    position: relative;
+    #cover {
+        
+        position: absolute;
+        background-color: gray;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        
+        z-index: 30;
+       
+    }
 }
 
 a {

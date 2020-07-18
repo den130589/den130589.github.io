@@ -32,11 +32,76 @@
 
             &:last-child {
                 border: none;
+
+            }
+            span {
+                color: #393939;
+                text-transform: uppercase;
+                font-size: 11px;
+                cursor: pointer;
             }
         }
         
     }
 }
+#modal {
+    position: absolute;
+    width: 350px;
+    height: auto;
+    background-color: white;
+    border: 2px solid lightgrey;
+    z-index: 31;
+    left: 50%;
+    top: 300px;
+    margin-left: -175px;
+    padding: 25px;
+    box-sizing: border-box;
+    line-height: 20px;
+    display: none;
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    p {
+        color: orange;
+    }
+    input {
+        border-left: 4px solid orange;
+        margin-top: 15px;
+        
+        
+    }
+    button {
+        background-color: orange;
+        border: none;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .modal-sign {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        span {
+            margin-top: 12px;
+        }
+        button {
+            margin-top: 5px;
+        }
+    }
+    #btnClose {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 40px;
+        height: 20px;
+        
+    }
+}
+    
+
 
 .bottom-header {
     @include flexbox;
